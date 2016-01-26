@@ -10,12 +10,23 @@ Backfill lodash aliases that were removed in v4
 
 ## Summary
 
+Lodash v4 removed a bunch of aliases, several of which I prefer to the non-alias names. This module backfills those aliases so that they continue to function as expected. The list of aliases backfilled by this module are: all (every), any (some), backflow (flowRight), callback (iteratee), collect (map), compose (flowRight), contains (includes), detect (find), foldl (reduce), foldr (reduceRight), include (includes), inject (reduce), methods (functions), object (zipObject), select (filter), and unique (uniq), as well as the prototypal #run (#value).
+
+This module is for those who prefer some of these aliases to the actual function names and for anyone who has a large code base that already uses some of these aliases but wants to upgrade to lodash v4.
+
 ## Usage
 
-### Node
-### Browser
+In node, requiring this function will extend lodash (if present) with the missing methods. Lodash is listed as an optional dependency because this module is intended to be used in projects along side an existing lodash install. If lodash is _not_ installed, this module simply does nothing.
 
-### Example
+```js
+require('lodash-aliases');
+var _ = require('lodash');
+_.any([1, 2, 3], function(num) {
+  return num % 2 === 0;
+}); // true
+```
+
+In the browser, you have even less work to do. By simply including `dist/lodash-aliases.js` or `dist/lodash-aliases.min.js` in a script or in a build bundle, lodash will automatically be extended on load.
 
 ## Contributing
 
