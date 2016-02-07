@@ -16,7 +16,7 @@ This module is for those who prefer some of these aliases to the actual function
 
 ## Usage
 
-In node, requiring this function will extend lodash (if present) with the missing methods. Lodash is listed as an optional dependency because this module is intended to be used in projects along side an existing lodash install. If lodash is _not_ installed, this module simply does nothing.
+In node, requiring this function will extend lodash (if present) with the missing methods. Lodash is listed as an peer dependency because this module is intended to be used in projects along side an existing lodash install, and this module will not work if it doesn't have access to the dependent's version of lodash.
 
 ```js
 require('lodash-aliases');
