@@ -65,7 +65,7 @@
     "should": "^8.2.0",
     "watchify": "^3.7.0"
   },
-  "optionalDependencies": {
-    "lodash": "^4.0.1"
+  "peerDependencies": {
+    "lodash": "*"
   }
 }
