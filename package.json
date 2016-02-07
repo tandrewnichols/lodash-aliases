@@ -1,7 +1,7 @@
 {
   "name": "lodash-aliases",
   "description": "Backfill lodash aliases that were removed in v4",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "lib/lodash-aliases.js",
   "scripts": {
     "test": "gulp"
